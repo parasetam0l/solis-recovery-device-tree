@@ -1,0 +1,37 @@
+# System
+/system         ext4    /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM      flags=backup=0;display="System"
+/system_image   emmc    /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM      flags=backup=1
+
+# Vendor
+/vendor         ext4    /dev/block/platform/13540000.dwmmc0/by-name/VENDOR      flags=backup=0;display="Vendor"
+/vendor_image   emmc    /dev/block/platform/13540000.dwmmc0/by-name/VENDOR      flags=backup=1
+
+# Cache
+/cache          ext4    /dev/block/platform/13540000.dwmmc0/by-name/CACHE       flags=display="Cache"
+
+# Data
+/data           ext4    /dev/block/platform/13540000.dwmmc0/by-name/USERDATA    flags=display="Data";encryptable=footer;length=-20480
+
+# Boot
+/boot           emmc    /dev/block/platform/13540000.dwmmc0/by-name/BOOT        flags=backup=1;display="Boot"
+
+# Recovery
+/recovery       emmc    /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY    flags=backup=1;display="Recovery"
+
+# Misc
+/misc           emmc    /dev/block/platform/13540000.dwmmc0/by-name/MISC        flags=backup=0;display="Misc"
+
+# EFS
+/efs            emmc    /dev/block/platform/13540000.dwmmc0/by-name/EFS         flags=backup=1;display="EFS"
+
+# CPEFS
+/cpefs          emmc    /dev/block/platform/13540000.dwmmc0/by-name/CPEFS       flags=backup=1;display="CPEFS"
+
+# Radio
+/radio          emmc    /dev/block/platform/13540000.dwmmc0/by-name/RADIO       flags=backup=1;display="Baseband"
+
+# MicroSD
+/external_sd    auto    /dev/block/mmcblk1p1    /dev/block/mmcblk1              flags=display="MicroSD";storage;wipeingui;removable
+
+# USB OTG
+/usb-otg        auto    /dev/block/sda1         /dev/block/sda                  flags=display="USB OTG";storage;wipeingui;removable
